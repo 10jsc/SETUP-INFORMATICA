@@ -1,0 +1,242 @@
+/* ============================================================
+   SETUP INFORMÁTICA — landing page minimalista (clone Cel Infor)
+   Zero JS, zero CDN, zero fontes externas — só CSS próprio
+   Paleta original: #293f4e (tema) #1598c9 (azul) #13b918 (verde)
+   #ffb648 (laranja) #4a4a4a (texto)
+   ============================================================ */
+
+:root {
+  --tema: #293f4e;
+  --tema-escuro: #1e2f3b;
+  --azul: #1598c9;
+  --verde: #13b918;
+  --verde-escuro: #0aaa10;
+  --laranja: #ffb648;
+  --cinza: #4a4a4a;
+  --cinza-claro: #f4f6f8;
+  --borda: #e0e5ea;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--cinza);
+  background: #fff;
+  line-height: 1.5;
+}
+
+img { max-width: 100%; display: block; }
+
+a { text-decoration: none; color: inherit; }
+
+/* ---------------- Barra de anúncios ---------------- */
+.anuncio {
+  background: var(--verde);
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  letter-spacing: 0.3px;
+}
+
+/* ---------------- Cabeçalho ---------------- */
+header {
+  background: var(--tema);
+  color: #fff;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  height: 44px;
+  width: auto;
+  border-radius: 6px;
+}
+
+header .marca h1 { font-size: 20px; letter-spacing: 1px; }
+header .marca small { display: block; font-size: 12px; color: #a9c3d0; font-weight: 400; }
+
+nav { margin-left: auto; display: flex; gap: 20px; font-size: 14px; flex-wrap: wrap; }
+nav a { color: #d7e6ee; font-weight: 500; }
+nav a:hover { color: var(--laranja); }
+
+/* ---------------- Hero estático ---------------- */
+.hero {
+  position: relative;
+  background: var(--tema-escuro);
+  color: #fff;
+  overflow: hidden;
+}
+.hero img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  opacity: 0.45;
+}
+.hero-texto {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: 0 24px;
+}
+.hero-texto h2 { font-size: 34px; letter-spacing: 2px; text-transform: uppercase; }
+.hero-texto p { font-size: 16px; color: #d7e6ee; max-width: 560px; }
+.cta {
+  background: var(--verde);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: background 0.2s;
+}
+.cta:hover { background: var(--verde-escuro); }
+
+/* ---------------- Vantagens ---------------- */
+.vantagens {
+  background: var(--cinza-claro);
+  border-bottom: 1px solid var(--borda);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.vantagem {
+  padding: 20px 18px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--tema);
+}
+.vantagem .icone { font-size: 26px; margin-bottom: 6px; }
+
+/* ---------------- Produtos ---------------- */
+.secao-titulo {
+  text-align: center;
+  padding: 44px 20px 6px;
+  font-size: 24px;
+  color: var(--tema);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.secao-titulo small { display: block; font-size: 14px; color: var(--cinza); letter-spacing: 0; text-transform: none; margin-top: 6px; font-weight: 400; }
+
+.grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.card:hover { box-shadow: 0 6px 18px rgba(41, 63, 78, 0.14); transform: translateY(-3px); }
+
+.card .foto {
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 170px;
+}
+.card .foto img { max-height: 150px; object-fit: contain; }
+
+.card .info { padding: 12px 14px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+
+.card .nome {
+  font-size: 13.5px;
+  color: var(--tema);
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 40px;
+}
+
+.card .precos { display: flex; align-items: baseline; gap: 8px; }
+.card .de { font-size: 12.5px; color: #999; text-decoration: line-through; }
+.card .por { font-size: 19px; font-weight: 800; color: var(--verde-escuro); }
+
+.card .comprar {
+  margin-top: auto;
+  text-align: center;
+  background: var(--azul);
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+.card .comprar:hover { background: #0f7ca5; }
+
+/* ---------------- FAQ ---------------- */
+.faq {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 10px 24px 56px;
+}
+.faq details {
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+.faq summary {
+  cursor: pointer;
+  padding: 14px 18px;
+  font-weight: 600;
+  color: var(--tema);
+  font-size: 15px;
+  list-style: none;
+  position: relative;
+  padding-right: 40px;
+}
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--azul);
+  font-size: 20px;
+}
+.faq details[open] summary::after { content: "–"; }
+.faq details p { padding: 0 18px 16px; font-size: 14px; }
+
+/* ---------------- Rodapé ---------------- */
+footer {
+  background: var(--tema-escuro);
+  color: #b9ccd6;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 13px;
+}
+footer .marca-rodape { font-weight: 700; color: #fff; letter-spacing: 1px; font-size: 15px; margin-bottom: 6px; }
+footer a { color: var(--laranja); font-weight: 600; }
+
+/* ---------------- Responsivo ---------------- */
+@media (max-width: 700px) {
+  .hero-texto h2 { font-size: 24px; }
+  .hero img { height: 260px; }
+  nav { margin-left: 0; width: 100%; gap: 14px; }
+}
