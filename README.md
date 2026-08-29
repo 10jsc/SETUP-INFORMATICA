@@ -10,13 +10,15 @@ site/
 ├── index.html   ← página gerada (não editar à mão)
 ├── style.css    ← CSS próprio, paleta da Cel Infor (#293f4e, #1598c9, #13b918, #ffb648)
 ├── assets/      ← logo e 41 fotos de produto (redimensionadas: máx. 600px / q.80)
+├── produto/     ← 41 páginas de descrição geradas (uma por produto)
 └── README.md
 ```
 
 ## Como atualizar (preços, produtos, textos)
 
 A página é **gerada** pelo script `../build.py`, que lê `../produtos.json`
-(`nome`, `orig`, `revenda`, `img`) e reescreve `index.html`.
+(`nome`, `orig`, `revenda`, `img`, `url`) e `../descricoes.json`
+(`url` -> descrição + características) e reescreve `index.html` + `produto/*.html`.
 
 1. Edite `../produtos.json` (ou `../build.py` para textos/FAQ).
 2. Rode: `python ../build.py`

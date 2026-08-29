@@ -205,6 +205,88 @@ nav a:hover { color: var(--laranja); }
 }
 .card .comprar:hover { background: #6d28d9; }
 
+/* ---------------- Página de produto ---------------- */
+.crumb {
+  max-width: 1280px;
+  margin: 18px auto -10px;
+  padding: 0 24px;
+  font-size: 13px;
+}
+.crumb a { color: var(--roxo); font-weight: 600; }
+.crumb a:hover { text-decoration: underline; }
+
+.produto-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.produto-foto {
+  flex: 1 1 380px;
+  max-width: 520px;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+.produto-foto img { max-height: 420px; object-fit: contain; }
+
+.produto-info { flex: 1 1 380px; display: flex; flex-direction: column; gap: 16px; }
+.produto-info h1 { font-size: 22px; color: var(--tema); line-height: 1.3; }
+.produto-info .por { font-size: 30px; font-weight: 800; color: var(--verde-escuro); }
+.produto-info .comprar {
+  background: var(--roxo);
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: background 0.2s;
+  max-width: 320px;
+}
+.produto-info .comprar:hover { background: #6d28d9; }
+
+.produto-desc {
+  background: var(--cinza-claro);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+.produto-desc h2, .produto-specs h2 { font-size: 15px; color: var(--tema); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+.produto-desc p { font-size: 14.5px; }
+
+.produto-specs { background: #fff; border: 1px solid var(--borda); border-radius: 10px; padding: 18px 20px; }
+.produto-specs ul { list-style: none; }
+.produto-specs li {
+  padding: 8px 0 8px 22px;
+  border-bottom: 1px dashed var(--borda);
+  font-size: 14px;
+  position: relative;
+}
+.produto-specs li:last-child { border-bottom: none; }
+.produto-specs li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--verde);
+  font-weight: 700;
+}
+.voltar {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--roxo);
+  font-weight: 600;
+  font-size: 14px;
+}
+.voltar:hover { text-decoration: underline; }
+
 /* ---------------- FAQ ---------------- */
 .faq {
   max-width: 760px;
