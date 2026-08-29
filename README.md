@@ -9,7 +9,7 @@ zero JavaScript, zero CDN, zero fontes externas. Só HTML + CSS + imagens locais
 site/
 ├── index.html   ← página gerada (não editar à mão)
 ├── style.css    ← CSS próprio, paleta da Cel Infor (#293f4e, #1598c9, #13b918, #ffb648)
-├── assets/      ← logo, banner e 41 fotos de produto (redimensionadas: máx. 600px / q.80)
+├── assets/      ← logo e 41 fotos de produto (redimensionadas: máx. 600px / q.80)
 └── README.md
 ```
 

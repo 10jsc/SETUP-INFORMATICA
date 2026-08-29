@@ -8,7 +8,7 @@
 :root {
   --tema: #293f4e;
   --tema-escuro: #1e2f3b;
-  --azul: #1598c9;
+  --roxo: #7c3aed;
   --verde: #13b918;
   --verde-escuro: #0aaa10;
   --laranja: #ffb648;
@@ -65,32 +65,25 @@ nav { margin-left: auto; display: flex; gap: 20px; font-size: 14px; flex-wrap: w
 nav a { color: #d7e6ee; font-weight: 500; }
 nav a:hover { color: var(--laranja); }
 
-/* ---------------- Hero estático ---------------- */
+/* ---------------- Hero (gradiente + produto destaque) ---------------- */
 .hero {
-  position: relative;
-  background: var(--tema-escuro);
+  background: linear-gradient(115deg, var(--tema-escuro) 0%, #4c1d95 60%, var(--roxo) 100%);
   color: #fff;
-  overflow: hidden;
-}
-.hero img {
-  width: 100%;
-  height: 340px;
-  object-fit: cover;
-  opacity: 0.45;
+  padding: 52px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+  flex-wrap: wrap;
 }
 .hero-texto {
-  position: absolute;
-  inset: 0;
+  max-width: 520px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   gap: 14px;
-  padding: 0 24px;
 }
 .hero-texto h2 { font-size: 34px; letter-spacing: 2px; text-transform: uppercase; }
-.hero-texto p { font-size: 16px; color: #d7e6ee; max-width: 560px; }
+.hero-texto p { font-size: 16px; color: #e4dcf5; }
 .cta {
   background: var(--verde);
   color: #fff;
@@ -101,6 +94,29 @@ nav a:hover { color: var(--laranja); }
   transition: background 0.2s;
 }
 .cta:hover { background: var(--verde-escuro); }
+
+.hero-destaque {
+  background: #fff;
+  color: var(--cinza);
+  border-radius: 12px;
+  padding: 16px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+.hero-destaque img { height: 150px; object-fit: contain; margin: 0 auto; }
+.hero-destaque .nome {
+  font-size: 13px;
+  color: var(--tema);
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.hero-destaque .por { font-size: 20px; font-weight: 800; color: var(--verde-escuro); }
 
 /* ---------------- Vantagens ---------------- */
 .vantagens {
@@ -179,7 +195,7 @@ nav a:hover { color: var(--laranja); }
 .card .comprar {
   margin-top: auto;
   text-align: center;
-  background: var(--azul);
+  background: var(--roxo);
   color: #fff;
   padding: 10px;
   border-radius: 6px;
@@ -187,7 +203,7 @@ nav a:hover { color: var(--laranja); }
   font-size: 14px;
   transition: background 0.2s;
 }
-.card .comprar:hover { background: #0f7ca5; }
+.card .comprar:hover { background: #6d28d9; }
 
 /* ---------------- FAQ ---------------- */
 .faq {
@@ -217,7 +233,7 @@ nav a:hover { color: var(--laranja); }
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--azul);
+  color: var(--roxo);
   font-size: 20px;
 }
 .faq details[open] summary::after { content: "–"; }
@@ -236,7 +252,7 @@ footer a { color: var(--laranja); font-weight: 600; }
 
 /* ---------------- Responsivo ---------------- */
 @media (max-width: 700px) {
+  .hero-texto { text-align: center; align-items: center; }
   .hero-texto h2 { font-size: 24px; }
-  .hero img { height: 260px; }
   nav { margin-left: 0; width: 100%; gap: 14px; }
 }
