@@ -85,8 +85,42 @@ nav a:hover { color: var(--laranja); }
   width: calc(100% * var(--n, 6));
   animation: heroSlide 26s ease-in-out infinite alternate;
 }
-.hero-slide { flex: 0 0 auto; width: calc(100% / var(--n, 6)); height: 100%; }
-.hero-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-slide {
+  position: relative;
+  flex: 0 0 auto;
+  width: calc(100% / var(--n, 6));
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.hero-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.hero-preco {
+  position: absolute;
+  right: 24px;
+  bottom: 18px;
+  background: rgba(30, 47, 59, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 18px;
+}
+.hero-preco small {
+  display: block;
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--laranja);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 .hero-overlay {
   position: absolute;
   inset: 0;
