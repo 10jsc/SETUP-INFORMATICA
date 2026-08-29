@@ -1,0 +1,8 @@
+# Segredos e dados pessoais — NUNCA subir
+.env
+.env.*
+*.env
+*.key
+*.pem
+*senha*
+*.log
