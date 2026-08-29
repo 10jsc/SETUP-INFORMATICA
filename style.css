@@ -129,9 +129,11 @@ nav a:hover { color: var(--laranja); }
 .hero-texto {
   position: relative;
   z-index: 1;
-  max-width: 520px;
+  max-width: 620px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 14px;
 }
 .hero-texto h2 { font-size: 34px; letter-spacing: 2px; text-transform: uppercase; }
@@ -146,31 +148,6 @@ nav a:hover { color: var(--laranja); }
   transition: background 0.2s;
 }
 .cta:hover { background: var(--verde-escuro); }
-
-.hero-destaque {
-  position: relative;
-  z-index: 1;
-  background: #fff;
-  color: var(--cinza);
-  border-radius: 12px;
-  padding: 16px;
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
-}
-.hero-destaque img { height: 150px; object-fit: contain; margin: 0 auto; }
-.hero-destaque .nome {
-  font-size: 13px;
-  color: var(--tema);
-  font-weight: 600;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.hero-destaque .por { font-size: 20px; font-weight: 800; color: var(--verde-escuro); }
 
 /* ---------------- Vantagens ---------------- */
 .vantagens {
