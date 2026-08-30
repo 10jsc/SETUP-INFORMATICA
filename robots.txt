@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://10jsc.github.io/SETUP-INFORMATICA/sitemap.xml
