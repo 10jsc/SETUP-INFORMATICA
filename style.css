@@ -225,6 +225,11 @@ nav a:hover { color: var(--laranja); }
 }
 .card:hover { box-shadow: 0 6px 18px rgba(41, 63, 78, 0.14); transform: translateY(-3px); }
 
+/* busca: display:flex do .card sobrescreve o [hidden] nativo do navegador;
+   sem estas regras o filtro da busca escondia os cards na lógica mas eles
+   continuavam visíveis na tela */
+.card[hidden], .secao-grid[hidden], #busca-vazia[hidden] { display: none !important; }
+
 .card .foto {
   background: #fff;
   padding: 10px;
