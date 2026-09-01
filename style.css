@@ -83,7 +83,7 @@ nav a:hover { color: var(--laranja); }
   display: flex;
   height: 100%;
   width: calc(100% * var(--n, 6));
-  animation: heroSlide 26s ease-in-out infinite alternate;
+  animation: heroSlide var(--dur, 26s) ease-in-out infinite alternate;
 }
 .hero-slide {
   position: relative;
