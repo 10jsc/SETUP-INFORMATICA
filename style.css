@@ -203,8 +203,35 @@ nav a:hover { color: var(--laranja); }
   align-items: center;
   justify-content: center;
   height: 170px;
+  position: relative;
 }
 .card .foto img { max-height: 150px; object-fit: contain; }
+
+.card .prazo {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--laranja);
+  color: var(--tema);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 9px;
+  border-radius: 999px;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+}
+
+.prazo-produto {
+  display: inline-block;
+  background: var(--cinza-claro);
+  border: 1px solid var(--borda);
+  color: var(--tema);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 700;
+}
 
 .card .info { padding: 12px 14px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
 
