@@ -165,7 +165,32 @@ nav a:hover { color: var(--laranja); }
 }
 .vantagem .icone { font-size: 26px; margin-bottom: 6px; }
 
+/* ---------------- Busca ---------------- */
+.busca-wrap {
+  max-width: 760px;
+  margin: 26px auto 10px;
+  padding: 0 18px;
+  text-align: center;
+}
+.busca {
+  width: 100%;
+  padding: 13px 18px;
+  font-size: 15px;
+  border: 2px solid var(--borda);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--tema);
+}
+.busca:focus { outline: none; border-color: var(--laranja); }
+#busca-vazia { margin-top: 10px; color: #888; font-size: 14px; }
+
 /* ---------------- Produtos ---------------- */
+.produto-id {
+  font-size: 12px;
+  color: #999;
+  letter-spacing: 0.5px;
+  margin: 2px 0 4px;
+}
 .secao-titulo {
   text-align: center;
   padding: 44px 20px 6px;
