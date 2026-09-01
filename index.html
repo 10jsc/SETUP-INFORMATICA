@@ -793,7 +793,7 @@
     // ignora MAIÚSCULAS e ACENTOS ("placa mae" acha "Placa Mãe");
     // RE_ACENTO remove os caracteres combinantes (á -> a)
     function norm(s) {
-      return s.toLowerCase().normalize('NFD').replace([̀-ͯ], '');
+      return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
     }
     input.addEventListener('input', function () {
       // busca por TOKENS: todas as palavras digitadas precisam aparecer
