@@ -176,13 +176,17 @@ nav a:hover { color: var(--laranja); }
   width: 100%;
   padding: 13px 18px;
   font-size: 15px;
-  border: 2px solid var(--borda);
+  border: 2px solid var(--roxo);
   border-radius: 8px;
   background: #fff;
   color: var(--tema);
 }
-.busca:focus { outline: none; border-color: var(--laranja); }
-#busca-vazia { margin-top: 10px; color: #888; font-size: 14px; }
+.busca:focus {
+  outline: none;
+  border-color: var(--roxo);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.18);
+}
+#busca-vazia { margin-top: 10px; color: var(--roxo); font-size: 14px; font-weight: 600; }
 
 /* ---------------- Produtos ---------------- */
 .produto-id {
