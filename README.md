@@ -43,5 +43,5 @@ git push -u origin main
 
 ## WhatsApp
 
-Todos os botões de compra apontam para `wa.me/573180145397` (número da loja)
-com mensagem pré-preenchida com o nome do produto.
+Todos os botões de compra apontam para `wa.me/5561996052716` (número da loja,
+chip novo 2026-09-03) com mensagem pré-preenchida com o nome do produto.
