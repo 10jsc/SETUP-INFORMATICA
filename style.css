@@ -380,8 +380,40 @@ nav a:hover { color: var(--laranja); }
 .voltar:hover { text-decoration: underline; }
 
 /* ---------------- Confiança (garantia/atendimento) ----------------
-   Fica entre os produtos e o FAQ. Mesma largura do .grid para alinhar com os
-   cards acima; texto à esquerda (parágrafo centralizado cansa a leitura). */
+   Cortina nativa <details>, a mesma do FAQ. Fica entre os produtos e o FAQ.
+   Mesma largura do .grid para alinhar com os cards acima; texto à esquerda
+   (parágrafo centralizado cansa a leitura).
+
+   FECHADA mostra o título E a linha-resumo, não só o título: na página de
+   produto o bloco existe porque a decisão de R$ 48 mil acontecia ali sem nada
+   sobre garantia, e esconder tudo atrás de um clique desfaria o motivo. O "+"
+   é redondo e centralizado porque o título é centralizado — um "+" na borda
+   direita ficaria longe do texto em tela larga. */
+.confianca-bloco { max-width: 1280px; margin: 0 auto; }
+.confianca-bloco summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0;
+}
+.confianca-bloco summary::-webkit-details-marker { display: none; }
+.confianca-bloco summary:hover .secao-titulo { color: var(--roxo); }
+.confianca-bloco summary .secao-titulo { padding-bottom: 0; transition: color .15s; }
+.confianca-bloco summary::after {
+  content: "+";
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 27px;
+  margin: 6px auto 0;
+  border: 1px solid var(--borda);
+  border-radius: 50%;
+  background: var(--cinza-claro);
+  color: var(--tema);
+  font-size: 19px;
+  font-weight: 600;
+  text-align: center;
+}
+.confianca-bloco[open] summary::after { content: "–"; }
 .confianca {
   max-width: 1280px;
   margin: 0 auto;

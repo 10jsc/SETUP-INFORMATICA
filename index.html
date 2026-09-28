@@ -38,6 +38,7 @@
     <nav>
       <a href="#produtos">Todos os produtos</a>
       <a href="#pcs">PCs Gamer</a>
+      <a href="#confianca">Por que comprar aqui</a>
       <a href="#faq">Dúvidas</a>
       <a href="https://wa.me/556196052716">Fale conosco</a>
     </nav>
@@ -1182,23 +1183,27 @@
   </div>
   </section>
 
-  <h2 class="secao-titulo" id="confianca">Por que comprar aqui
-    <small>Produto original, atendimento direto e serviço de técnico</small>
-  </h2>
-  <section class="confianca">
-    <div class="confianca-item">
-      <h3>Quem te atende</h3>
-      <p>Você fala direto com nosso time pelo WhatsApp, do começo ao fim — para tirar dúvida, fechar o pedido e acompanhar a entrega. O prazo é de até 7 dias úteis, contado a partir da transportadora.</p>
-    </div>
-    <div class="confianca-item">
-      <h3>Procedência e garantia</h3>
-      <p>Você tem a garantia legal de 90 dias contra defeitos, garantida pelo Código de Defesa do Consumidor, e 7 dias para troca ou devolução após o recebimento. Todos os produtos são novos, lacrados e originais, vindos de fornecedores autorizados, e a nota fiscal sai no seu nome, o que dá acesso à garantia do fabricante.</p>
-    </div>
-    <div class="confianca-item">
-      <h3>Suporte de verdade</h3>
-      <p>Temos técnicos em informática: montagem, configuração, otimização de desempenho, backup de dados e cabeamento estruturado — para computadores de uso pessoal, gamer e de escritório.</p>
-    </div>
-  </section>
+  <details class="confianca-bloco" id="confianca">
+    <summary>
+      <h2 class="secao-titulo">Por que comprar aqui
+        <small>Produto original, atendimento direto e garantia legal de 90 dias</small>
+      </h2>
+    </summary>
+    <section class="confianca">
+      <div class="confianca-item">
+        <h3>Quem te atende</h3>
+        <p>Você fala direto com nosso time pelo WhatsApp, do começo ao fim — para tirar dúvida, fechar o pedido e acompanhar a entrega. O prazo é de até 7 dias úteis, contado a partir da transportadora.</p>
+      </div>
+      <div class="confianca-item">
+        <h3>Procedência e garantia</h3>
+        <p>Você tem a garantia legal de 90 dias contra defeitos, garantida pelo Código de Defesa do Consumidor, e 7 dias para troca ou devolução após o recebimento. Todos os produtos são novos, lacrados e originais, vindos de fornecedores autorizados, e a nota fiscal sai no seu nome, o que dá acesso à garantia do fabricante.</p>
+      </div>
+      <div class="confianca-item">
+        <h3>Suporte de verdade</h3>
+        <p>Temos técnicos em informática: montagem, configuração, otimização de desempenho, backup de dados e cabeamento estruturado — para computadores de uso pessoal, gamer e de escritório.</p>
+      </div>
+    </section>
+  </details>
 
   <h2 class="secao-titulo" id="faq">Dúvidas frequentes</h2>
   <section class="faq">
@@ -1206,8 +1211,6 @@
       <details><summary>Vocês entregam para todo o Brasil?</summary><p>Sim, enviamos para todo o território nacional. No Centro-Oeste o frete é grátis; nas demais regiões o prazo e o valor são calculados no fechamento do pedido pelo WhatsApp.</p></details>
       <details><summary>Meu pagamento foi aprovado na hora?</summary><p>No Pix a confirmação é em segundos e o pedido já segue para a entrega. No cartão de crédito à vista a aprovação também é na hora.</p></details>
       <details><summary>Posso parcelar a compra?</summary><p>Pode, de duas formas. No Pix no crédito, você paga pelo aplicativo do seu banco e parcela na quantidade que ele oferecer — quem define as parcelas e os juros é o seu banco, e nós recebemos o valor à vista, então o pedido já segue para a entrega sem esperar as parcelas chegarem. A outra é combinar com a gente pelo WhatsApp as opções no cartão de crédito. Se o seu banco ainda não oferecer o Pix no crédito, fale com a gente que a gente vê a melhor forma junto com você.</p></details>
-      <details><summary>Os produtos são novos e originais?</summary><p>Sim. Todos os produtos são novos, lacrados e originais, vindos de fornecedores autorizados.</p></details>
-      <details><summary>Posso trocar ou devolver um produto?</summary><p>Sim. Você tem 7 dias para troca ou devolução após o recebimento, conforme o Código de Defesa do Consumidor. É só falar com a gente pelo WhatsApp.</p></details>
       <details><summary>Posso realizar a compra ou retirar na loja física?</summary><p>Combinamos caso a caso pelo WhatsApp — dependendo do seu endereço, a retirada pode ser agendada. Chame a gente para ver a melhor opção para você.</p></details>
       <details><summary>Quais tipos de manutenção vocês realizam?</summary><p>Temos técnicos em informática, fazemos montagem, configuração, otimização de desempenho, backups de dados e cabeamento estruturado — para computadores de uso pessoal, gamer e de escritório.</p></details>
       <details><summary>Vocês atendem escritórios e empresas?</summary><p>Sim! Além da venda de hardware, oferecemos serviços de técnico de informática pleno para escritórios: manutenção preventiva e corretiva de computadores, notebooks e impressoras; instalação e configuração de sistemas e softwares; redes wi-fi e cabeadas (roteadores, switches e cabeamento estruturado); backup e recuperação de dados; configuração de e-mail corporativo; e proteção contra vírus e ransomware. Chame no WhatsApp e montamos a solução para o seu escritório.</p></details>
@@ -1259,5 +1262,15 @@
   })();
   </script>
 
+<script>
+// Abre a cortina quando o menu manda para #confianca (senão o link cai numa caixa fechada).
+(function () {
+  var d = document.getElementById('confianca');
+  if (!d) return;
+  function abrir() { if (location.hash === '#confianca') d.open = true; }
+  window.addEventListener('hashchange', abrir);
+  abrir();
+})();
+</script>
 </body>
 </html>

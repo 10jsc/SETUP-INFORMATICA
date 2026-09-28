@@ -29,6 +29,7 @@
     </div>
     <nav>
       <a href="../index.html#produtos">Produtos</a>
+      <a href="#confianca">Por que comprar aqui</a>
       <a href="../index.html#faq">Dúvidas</a>
       <a href="https://wa.me/556196052716">Fale conosco</a>
     </nav>
@@ -50,23 +51,27 @@
   </section>
 
 
-  <h2 class="secao-titulo" id="confianca">Por que comprar aqui
-    <small>Produto original, atendimento direto e serviço de técnico</small>
-  </h2>
-  <section class="confianca">
-    <div class="confianca-item">
-      <h3>Quem te atende</h3>
-      <p>Você fala direto com nosso time pelo WhatsApp, do começo ao fim — para tirar dúvida, fechar o pedido e acompanhar a entrega. O prazo é de até 7 dias úteis, contado a partir da transportadora.</p>
-    </div>
-    <div class="confianca-item">
-      <h3>Procedência e garantia</h3>
-      <p>Você tem a garantia legal de 90 dias contra defeitos, garantida pelo Código de Defesa do Consumidor, e 7 dias para troca ou devolução após o recebimento. Todos os produtos são novos, lacrados e originais, vindos de fornecedores autorizados, e a nota fiscal sai no seu nome, o que dá acesso à garantia do fabricante.</p>
-    </div>
-    <div class="confianca-item">
-      <h3>Suporte de verdade</h3>
-      <p>Temos técnicos em informática: montagem, configuração, otimização de desempenho, backup de dados e cabeamento estruturado — para computadores de uso pessoal, gamer e de escritório.</p>
-    </div>
-  </section>
+  <details class="confianca-bloco" id="confianca">
+    <summary>
+      <h2 class="secao-titulo">Por que comprar aqui
+        <small>Produto original, atendimento direto e garantia legal de 90 dias</small>
+      </h2>
+    </summary>
+    <section class="confianca">
+      <div class="confianca-item">
+        <h3>Quem te atende</h3>
+        <p>Você fala direto com nosso time pelo WhatsApp, do começo ao fim — para tirar dúvida, fechar o pedido e acompanhar a entrega. O prazo é de até 7 dias úteis, contado a partir da transportadora.</p>
+      </div>
+      <div class="confianca-item">
+        <h3>Procedência e garantia</h3>
+        <p>Você tem a garantia legal de 90 dias contra defeitos, garantida pelo Código de Defesa do Consumidor, e 7 dias para troca ou devolução após o recebimento. Todos os produtos são novos, lacrados e originais, vindos de fornecedores autorizados, e a nota fiscal sai no seu nome, o que dá acesso à garantia do fabricante.</p>
+      </div>
+      <div class="confianca-item">
+        <h3>Suporte de verdade</h3>
+        <p>Temos técnicos em informática: montagem, configuração, otimização de desempenho, backup de dados e cabeamento estruturado — para computadores de uso pessoal, gamer e de escritório.</p>
+      </div>
+    </section>
+  </details>
   <footer>
     <div class="marca-rodape"><a href="../index.html" style="color:inherit;font-weight:inherit">SETUP INFORMÁTICA</a></div>
     <p>PCs Gamer, computadores, placas de vídeo, placas-mãe, processadores, memórias e SSDs — pedidos pelo WhatsApp.</p>
@@ -74,5 +79,15 @@
     <p style="margin-top:14px;font-size:12px;color:#9fb6c2">Desenvolvido by JSC</p>
   </footer>
 
+<script>
+// Abre a cortina quando o menu manda para #confianca (senão o link cai numa caixa fechada).
+(function () {
+  var d = document.getElementById('confianca');
+  if (!d) return;
+  function abrir() { if (location.hash === '#confianca') d.open = true; }
+  window.addEventListener('hashchange', abrir);
+  abrir();
+})();
+</script>
 </body>
 </html>
