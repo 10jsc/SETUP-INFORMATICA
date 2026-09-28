@@ -18,7 +18,7 @@ site/
 ## Como atualizar (preços, produtos, textos)
 
 A página é **gerada** pelo script `../build.py`, que lê os JSON do catálogo
-(itens com entrega em 24 horas e itens com prazo de transportadora) e o arquivo
+(hardware e componentes e PCs Gamer, ambos com prazo de transportadora) e o arquivo
 de descrições (`url` → descrição + características), e reescreve `index.html`,
 `produto/*.html`, `sitemap.xml` e `robots.txt`.
 
