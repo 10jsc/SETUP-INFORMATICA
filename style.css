@@ -379,6 +379,33 @@ nav a:hover { color: var(--laranja); }
 }
 .voltar:hover { text-decoration: underline; }
 
+/* ---------------- Confiança (garantia/atendimento) ----------------
+   Fica entre os produtos e o FAQ. Mesma largura do .grid para alinhar com os
+   cards acima; texto à esquerda (parágrafo centralizado cansa a leitura). */
+.confianca {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 8px 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.confianca-item {
+  background: var(--cinza-claro);
+  border: 1px solid var(--borda);
+  border-left: 4px solid var(--tema);
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+.confianca-item h3 {
+  font-size: 15px;
+  color: var(--tema);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 8px;
+}
+.confianca-item p { font-size: 14px; line-height: 1.6; }
+
 /* ---------------- FAQ ---------------- */
 .faq {
   max-width: 760px;
